@@ -12,7 +12,7 @@ import android.widget.TextView;
  *@authors Jacob Arnez, Maja Elliott, Dylan Kim, Chase Ohmestede
  * */
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,14 @@ public class MainActivity extends AppCompatActivity {
                 //clears text
                 editText.setText(" ");
 
+                GameState firstInstance = new GameState();
+                //needs: copied by deep constructor, call each method and
+                //print results to screen
+                GameState secondInstance = new GameState();
+                //needs: copied by deep constructor, call each method and
+                //print results to screen
             }
         });
 
     }
+}
