@@ -1,7 +1,5 @@
 package com.example.a301parte;
 
-package com.example.rummikub;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
