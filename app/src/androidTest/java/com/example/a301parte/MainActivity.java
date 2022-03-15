@@ -19,11 +19,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        TextView editText = (TextView) findViewById(R.id.textView3);
 
-        Button rTButton = (Button) findViewById(R.id.button);
-        rTButton.setOnClickListener(new View.OnClickListener() {
+        //Test button
+        Button tButton = (Button) findViewById(R.id.testbutton);
+        tButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //clears text
+                editText.setText(" ");
 
             }
         });
