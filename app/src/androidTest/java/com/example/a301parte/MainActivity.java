@@ -37,10 +37,37 @@ public class MainActivity extends AppCompatActivity{
                 //needs: copied by deep constructor, call each method and
                 //print results to screen
 
-                firstInstance.toString();
-                firstInstance.isWin();
-                firstInstance.drawTile();
-                firstInstance.changeTurn();
+                //call for toString
+                editText.append(firstInstance.toString());
+                //call for isWin
+                if(firstInstance.isWin()){
+                    editText.append("A player has won the game");
+                }else{
+                    editText.append("No player has won the game");
+                }
+                //Call for drawTile
+                if(firstInstance.getCurr_turn() == 0){
+                    firstInstance.drawTile();
+                    editText.append("Player 0 has drawn a tile");
+                }
+                else if(firstInstance.getCurr_turn() == 1) {
+                    firstInstance.drawTile();
+                    firstInstance.changeTurn();
+                }
+
+                //Instantiation of secondInstance and secondCopy
+                GameState secondInstance = new GameState();
+                GameState secondCopy = new GameState(secondInstance);
+                //prints to system
+                firstCopy.toString();
+                secondCopy.toString();
+                //
+                editText.append(firstCopy.toString());
+                editText.append(secondCopy.toString());
+
+
+
+
             }
         });
 
